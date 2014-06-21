@@ -1,5 +1,7 @@
-var io = require('socket.io-emitter')();
+var emitter = require('socket.io-emitter')({ host: 'localhost', port: '6379' });
+var debug = require('debug')('back-end');
 
 setInterval(function () {
-  io.emit('time', new Date);
+  debug('emit time event');
+  emitter.emit('time', new Date);
 }, 2000);

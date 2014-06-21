@@ -4,5 +4,8 @@
   "private": true,
   "dependencies": {
     "socket.io-emitter": "^0.2.0"
+  },
+  "devDependencies": {
+    "debug": "^1.0.2"
   }
 }
