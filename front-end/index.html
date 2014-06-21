@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>socket.io-emitter sample app</title>
+  </head>
+  <body>
+    <ul id="times"></ul>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+      var socket = io();
+      socket.on('time', function (data) {
+        console.log('time', typeof(data), data);
+        $('#times').append($('<li>').text(data));
+        socket.emit('ack', 200);
+      });
+    </script>
+  </body>
+</html>
