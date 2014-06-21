@@ -1,8 +1,5 @@
-node_modules
-components
-test/build.js
-example/components
-example/build/build.js
+./front-end/node_modules
+./back-end/node_modules
 .DS_Store
 *.swp
 *~
